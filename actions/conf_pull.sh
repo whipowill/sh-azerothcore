@@ -1,11 +1,11 @@
 # make directory if doesn't exist
-mkdir ~backups/conf
+mkdir ~/backups/conf
 
 # backup conf files from live
 cp -rn ~/core/env/dist/etc/* ~/backups/conf/.
 
 # cleanup
-cd conf
+cd ~/backups/conf
 rm -rf *.dist
-cd modules
+cd ~/backups/conf/modules
 rm -rf *.dist
