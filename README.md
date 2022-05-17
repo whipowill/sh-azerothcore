@@ -1,6 +1,8 @@
 # AzerothCore
 
-Provisioning a World of Warcraft server is pretty complicated, and after studying several options for how to do this I decided to roll w/ [AzerothCore](https://www.azerothcore.org/).  I've broken down the setup process into a handful of shell scripts that make it easy to install and maintain the server, including managing any modules you may want to add to your setup.
+Provisioning a World of Warcraft server is pretty complicated, and after studying several options for how to do this I decided to roll w/ [AzerothCore](https://www.azerothcore.org/).  I built a helper bash script that makes it easy to install and maintain the server.
+
+![AzerothCore Helper Script](https://i.imgur.com/hAfugvT.png)
 
 ## Install
 

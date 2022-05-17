@@ -103,7 +103,7 @@ echo -ne "
 █░▀▀░█▀▄██░▄▄█░▀▀▄█░██░██░██░▄▄░██░████░██░█░▀▀▄█░▄▄
 █░██░█▄▄▄█▄▄▄█▄█▄▄██▄▄███▄██▄██▄██░▀▀▄██▄▄██▄█▄▄█▄▄▄
 ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-https://github.com/whipowill/sh-azerothcore | by whipowill
+$(ColorBlue 'by whipowill') | https://github.com/whipowill/sh-azerothcore
 
 $(ColorGreen 'Ctrl-C to Exit')
 
