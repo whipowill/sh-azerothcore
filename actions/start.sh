@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
+sh ~/scripts/actions/stop.sh
+
 # CHANGE THESE WITH THE CORRECT PATHS
-authserver="/home/azeroth/core/acore.sh run-authserver"
-worldserver="/home/azeroth/core/acore.sh run-worldserver"
+authserver="~/core/acore.sh run-authserver"
+worldserver="~/core/acore.sh run-worldserver"
 
 authserver_session="auth-session"
 worldserver_session="world-session"

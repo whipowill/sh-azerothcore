@@ -1,0 +1,1 @@
+sudo ~/core/acore.sh compiler build

@@ -1,0 +1,1 @@
+mysqldump --all-databases --user=root --password=root > ~/backups/db/azerothcore.sql
