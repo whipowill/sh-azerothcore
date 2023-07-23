@@ -1,11 +1,5 @@
 #!/bin/bash
 
-function option0() {
-    echo ""
-    bash ~/scripts/actions/firewall.sh
-    echo ""
-}
-
 function option1() {
     echo ""
     bash ~/scripts/actions/start.sh
@@ -79,6 +73,12 @@ function option12() {
     echo ""
 }
 
+function option13() {
+    echo ""
+    bash ~/scripts/actions/firewall.sh
+    echo ""
+}
+
 ##
 # Color  Variables
 ##
@@ -98,6 +98,12 @@ ColorBlue(){
 }
 
 menu(){
+echo ""
+echo "$(ColorBlue 'SERVERS RUNNING')"
+echo "$(ColorBlue '====================================================')"
+tmux list-sessions
+echo "$(ColorBlue '====================================================')"
+echo "^^ You should see two sessions. ^^"
 echo -ne "
 ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 █░▄▄▀█▄▄░█░▄▄█░▄▄▀█▀▄▄▀█▄░▄█░█████░▄▄▀█▀▄▄▀█░▄▄▀█░▄▄
@@ -109,7 +115,6 @@ $(ColorBlue 'by whipowill') | https://github.com/whipowill/sh-azerothcore
 $(ColorGreen 'Ctrl-C to Exit')
 
 Server
-0) $(ColorGreen 'Open Ports')       - open ports 3724 and 8085
 1) $(ColorGreen 'Start Server')     - launch tmux sessions (restart)
 2) $(ColorGreen 'Stop Server')      - close tmux sessions
 3) $(ColorGreen 'View Console')     - view worldserver session (ctrl-b-d to exit)
@@ -129,10 +134,12 @@ Config
 11) $(ColorGreen 'Push Configs')    - copy from ~/backups/conf to ~/core/env/dist/etc/
 12) $(ColorGreen 'Nuke Configs')    - nuke ~/backups/conf
 
+Misc
+13) $(ColorGreen 'Open Ports')       - open ports 3724 and 8085
+
 $(ColorBlue 'Action:') "
         read a
         case $a in
-            0) option0 ; menu ;;
             1) option1 ; menu ;;
             2) option2 ; menu ;;
             3) option3 ; menu ;;
@@ -145,11 +152,9 @@ $(ColorBlue 'Action:') "
             10) option10 ; menu ;;
             11) option11 ; menu ;;
             12) option12 ; menu ;;
-            *) echo -e $red"Invalid option."$clear; WrongCommand;;
+            13) option13 ; menu ;;
+            *) menu;;
         esac
 }
-
-echo ""
-tmux list-sessions
 
 menu
