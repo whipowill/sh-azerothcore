@@ -75,21 +75,14 @@ $ menu
     - ``$ vim ~/scripts/actions/modules.sh`` to define your modules
 - Compile core
 - Reset database
-- Init configs
 - Pull configs
 - Edit configs
-    - ``$ cd ~/backups/conf``
-    - ``$ vim authserver.conf``
-        - ``LogsDir = "/home/azeroth/logs"``
-    - ``$ vim worldserver.conf``
-        - ``LogsDir = "/home/azeroth/logs"``
-        - PlayerLimit = 10
+    - The idea here is to always make edits to your backup configs, found in ``$ cd ~/backups/conf``, and to push those edits to the server.  This way if you ever have to redownload and redeploy the server, your configs are safe.
 - Push configs
 - Start server
 - View console
     - Create your user using [instructions](https://www.azerothcore.org/wiki/creating-accounts)
     - Use ``ctrl-b-d`` to exit tmux
-
 
 Manually change the ``acore_realmlist`` record in the MySQL database to the proper name and IP address.
 
@@ -104,20 +97,12 @@ $ menu
 - Stop server
 - Download core
 - Download modules
-    - ``$ vim ~/scripts/actions/modules.sh`` to define your modules
 - Compile core
 - Reset database
-- Init configs
 - Pull configs
 - Edit conigs
-    - ``$ cd ~/backups/conf``
-    - Make changes to your configs
-    - Going forward, always edit your backup configs and push them to server
 - Push configs
 - Start server
-- View console
-    - Create your user using [instructions](https://www.azerothcore.org/wiki/creating-accounts)
-    - Use ``ctrl-b-d`` to exit tmux
 
 ## Recommended Mods
 
@@ -133,7 +118,7 @@ $ menu
 
 ## Custom Patches
 
-There are a couple database migrations that my setup requires that I note them here for my reference:
+There are a couple database migrations that my setup requires that I note here for my reference:
 
 ```
 # add portals to capitol cities
@@ -146,6 +131,10 @@ mysql -uroot -proot --database="acore_world" --execute="UPDATE areatrigger_telep
 # add transmog NPCs in Stormwind and Orgrimmar near tailoring trainers
 mysql -uroot -proot --database="acore_world" --execute="DELETE FROM creature WHERE id1=190010"
 mysql -uroot -proot --database="acore_world" --execute="INSERT INTO creature (guid, id1, id2, id3, map, zoneId, areaId, spawnMask, phaseMask, equipment_id, position_x, position_y, position_z, orientation, spawntimesecs, wander_distance, currentwaypoint, curhealth, curmana, MovementType, npcflag, unit_flags, dynamicflags, ScriptName, VerifiedBuild) VALUES (3200505, 190010, 0, 0, 0, 0, 0, 1, 1, 0, -8944.69, 789.857, 90.942, 0.257173, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', NULL), (3200504, 190010, 0, 0, 1, 0, 0, 1, 1, 0, 1798.12, -4573.66, 23.0072, 1.33037, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', NULL);"
+
+# change cost of dual spec
+mysql -uroot -proot --database="acore_world" --execute="UPDATE gossip_menu_option SET BoxMoney = 1000000 WHERE OptionType = 18"
+# https://stackoverflow.com/questions/62095463/how-to-modify-the-price-of-the-dual-spec
 ```
 
 I put these in a ``patch.sh`` file that I can run for cases when I reset the database.
@@ -200,3 +189,4 @@ Use ``mod-stater-guild`` to default players to your guild.
 - [AzerothCore Installation Instructions](https://www.azerothcore.org/wiki/ac-dashboard-core-installation)
 - [AzerothCore Create New Accounts](https://www.azerothcore.org/wiki/creating-accounts)
 - [AzerothCore Gamemaster Commands](https://www.azerothcore.org/wiki/gm-commands)
+- [How To Change Ubuntu Timezone](https://linuxize.com/post/how-to-set-or-change-timezone-on-ubuntu-20-04/)

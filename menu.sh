@@ -149,6 +149,7 @@ $(ColorBlue 'Action:') "
         esac
 }
 
+echo ""
 tmux list-sessions
 
 menu
