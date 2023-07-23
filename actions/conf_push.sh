@@ -1,2 +1,2 @@
 # copy backup conf files to live
-cp -r ~/backups/conf/* ~/core/env/dist/etc/
+sudo cp -R /home/azeroth/backups/conf/* /home/azeroth/core/env/dist/etc/

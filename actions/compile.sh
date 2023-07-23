@@ -1,1 +1,1 @@
-sudo ~/core/acore.sh compiler build
+sudo /home/azeroth/core/acore.sh compiler build

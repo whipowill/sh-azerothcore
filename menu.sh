@@ -63,18 +63,19 @@ function option9() {
 function option10() {
     echo ""
     bash ~/scripts/actions/conf_init.sh
+    bash ~/scripts/actions/conf_pull.sh
     echo ""
 }
 
 function option11() {
     echo ""
-    bash ~/scripts/actions/conf_pull.sh
+    bash ~/scripts/actions/conf_push.sh
     echo ""
 }
 
 function option12() {
     echo ""
-    bash ~/scripts/actions/conf_push.sh
+    bash ~/scripts/actions/conf_nuke.sh
     echo ""
 }
 
@@ -109,7 +110,7 @@ $(ColorGreen 'Ctrl-C to Exit')
 
 Server
 0) $(ColorGreen 'Open Ports')       - open ports 3724 and 8085
-1) $(ColorGreen 'Start Server')     - launch tmux sessions (relaunch)
+1) $(ColorGreen 'Start Server')     - launch tmux sessions (restart)
 2) $(ColorGreen 'Stop Server')      - close tmux sessions
 3) $(ColorGreen 'View Console')     - view worldserver session (ctrl-b-d to exit)
 
@@ -124,9 +125,9 @@ Database
 9) $(ColorGreen 'Import Database')  - import from ~/backups/db/azerothcore.sql
 
 Config
-10) $(ColorGreen 'Init Configs')    - copy ~/core/env/dist/etc/*.conf.dist to .conf (converts to editable versions)
-11) $(ColorGreen 'Pull Configs')    - copy from ~/core/env/dist/etc/ to ~/backups/conf
-12) $(ColorGreen 'Push Configs')    - copy from ~/backups/conf to ~/core/env/dist/etc/
+10) $(ColorGreen 'Pull Configs')    - copy from ~/core/env/dist/etc/ to ~/backups/conf (will not overwrite existing)
+11) $(ColorGreen 'Push Configs')    - copy from ~/backups/conf to ~/core/env/dist/etc/
+12) $(ColorGreen 'Nuke Configs')    - nuke ~/backups/conf
 
 $(ColorBlue 'Action:') "
         read a
@@ -147,5 +148,7 @@ $(ColorBlue 'Action:') "
             *) echo -e $red"Invalid option."$clear; WrongCommand;;
         esac
 }
+
+tmux list-sessions
 
 menu
