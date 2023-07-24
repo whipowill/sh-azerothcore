@@ -17,6 +17,7 @@ git clone https://github.com/azerothcore/mod-transmog.git
 git clone https://github.com/azerothcore/mod-ah-bot.git
 git clone https://github.com/azerothcore/mod-progression-system
 git clone https://github.com/azerothcore/portals-in-all-capitals
+git clone https://github.com/azerothcore/mod-cta-switch
 
 # notes to self
 echo "/////////////////////////////////////////////////"

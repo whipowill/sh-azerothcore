@@ -77,7 +77,7 @@ $ menu
 - Reset database
 - Pull configs
 - Edit configs
-    - The idea here is to always make edits to your backup configs, found in ``$ cd ~/backups/conf``, and to push those edits to the server.  This way if you ever have to redownload and redeploy the server, your configs are safe.
+    - The idea is to always make edits to your backup configs (``cd ~/backups/conf``) and to push those edits to the server.  This way if you ever have to redownload and redeploy the server, your configs are safe.
 - Push configs
 - Start server
 - View console
@@ -106,15 +106,17 @@ $ menu
 
 ## Recommended Mods
 
-- [AutoBalance](https://github.com/azerothcore/mod-autobalance.git) - scales dungeons down
-- [AuctionHouse](https://github.com/azerothcore/mod-ah-bot.git) - adds random items to AH
-- [AccountAchievements](https://github.com/azerothcore/mod-account-achievements.git) - get credit on all toons [BROKEN]
-- [AccountMounts](https://github.com/azerothcore/mod-account-mounts) - get mounts on all toons
-- [TransmogNPC](https://github.com/azerothcore/mod-transmog.git) - transmog your gear
-- [LearnSpells](https://github.com/azerothcore/mod-learnspells.git) - auto learn spells on level [BROKEN]
-- [SoloLFG](https://github.com/azerothcore/mod-solo-lfg.git) - use RDF w/ less than 5
-- [HonorGuard](https://github.com/azerothcore/mod-gain-honor-guard) - get honor for killing guards
-- [WorldChat](https://github.com/azerothcore/mod-world-chat) - enable world chat
+- [AutoBalance](https://github.com/azerothcore/mod-autobalance.git)
+- [AuctionHouse](https://github.com/azerothcore/mod-ah-bot.git)
+- [AccountAchievements](https://github.com/azerothcore/mod-account-achievements.git) - [BROKEN]
+- [AccountMounts](https://github.com/azerothcore/mod-account-mounts)
+- [TransmogNPC](https://github.com/azerothcore/mod-transmog.git)
+- [LearnSpells](https://github.com/azerothcore/mod-learnspells.git) - [BROKEN]
+- [SoloLFG](https://github.com/azerothcore/mod-solo-lfg.git)
+- [HonorGuard](https://github.com/azerothcore/mod-gain-honor-guard)
+- [WorldChat](https://github.com/azerothcore/mod-world-chat)
+- [CTASwitch](https://github.com/azerothcore/mod-cta-switch)
+- [StarterGuild](https://github.com/azerothcore/mod-starter-guild)
 
 ## Custom Patches
 
@@ -124,10 +126,6 @@ There are a couple database migrations that my setup requires that I note here f
 # add portals to capitol cities
 mysql -uroot -proot acore_world < ~/core/modules/portals-in-all-capitals/portals-in-all-capitals.up.sql
 
-# disable Dark Portal (mod-progression forgot?)
-mysql -uroot -proot --database="acore_world" --execute="UPDATE areatrigger_teleport SET target_map=0, target_position_x=-11883.2, target_position_y=-3206.1, target_position_z=-16.616, target_orientation=0.1357 WHERE ID=4354;"
-# https://github.com/azerothcore/mod-progression-system/pull/279/commits/64d4653058273031e1ac7ac6d05e19c5df114941
-
 # add transmog NPCs in Stormwind and Orgrimmar near tailoring trainers
 mysql -uroot -proot --database="acore_world" --execute="DELETE FROM creature WHERE id1=190010"
 mysql -uroot -proot --database="acore_world" --execute="INSERT INTO creature (guid, id1, id2, id3, map, zoneId, areaId, spawnMask, phaseMask, equipment_id, position_x, position_y, position_z, orientation, spawntimesecs, wander_distance, currentwaypoint, curhealth, curmana, MovementType, npcflag, unit_flags, dynamicflags, ScriptName, VerifiedBuild) VALUES (3200505, 190010, 0, 0, 0, 0, 0, 1, 1, 0, -8944.69, 789.857, 90.942, 0.257173, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', NULL), (3200504, 190010, 0, 0, 1, 0, 0, 1, 1, 0, 1798.12, -4573.66, 23.0072, 1.33037, 300, 0, 0, 12600, 0, 0, 0, 0, 0, '', NULL);"
@@ -135,6 +133,18 @@ mysql -uroot -proot --database="acore_world" --execute="INSERT INTO creature (gu
 # change cost of dual spec
 mysql -uroot -proot --database="acore_world" --execute="UPDATE gossip_menu_option SET BoxMoney = 1000000 WHERE OptionType = 18"
 # https://stackoverflow.com/questions/62095463/how-to-modify-the-price-of-the-dual-spec
+
+# disable Dark Portal
+mysql -uroot -proot --database="acore_world" --execute="UPDATE areatrigger_teleport SET target_map=0, target_position_x=-11883.2, target_position_y=-3206.1, target_position_z=-16.616, target_orientation=0.1357 WHERE ID=4354;"
+# https://github.com/azerothcore/mod-progression-system/pull/279/commits/64d4653058273031e1ac7ac6d05e19c5df114941
+
+# fix city guards to lvl 60
+mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 55,maxlevel = 55,HealthModifier = 1 WHERE entry IN (3296, 3084, 16222, 18103, 68, 5595, 4262, 36481, 16733);"
+mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 60,maxlevel = 60,HealthModifier = 1.2259 WHERE entry IN (14304, 13839, 20672,  1756, 20674);"
+mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 60,maxlevel = 60, HealthModifier = 1.83885  WHERE entry IN (14375, 14439, 14423, 14378, 36225, 36226);"
+mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 62,maxlevel = 62, HealthModifier = 10 WHERE entry = 466;"
+mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 62,maxlevel = 62 WHERE entry IN (34986, 16801, 16800);"
+# https://github.com/JanEbbing/azerothcore-wotlk/blob/fix-issue-set-faction-leaders-to-vanilla-stats/data/sql/updates/pending_db_world/rev_1626707176333165500.sql
 ```
 
 I put these in a ``patch.sh`` file that I can run for cases when I reset the database.
@@ -157,7 +167,7 @@ account set gmlevel azeroth 3 -1
 Login and create two users:
 
 ```
-Admin // so you aren't tempted to use GM commands on your players
+Admin // so you aren't tempted
 Auction // for use in the AHBot config
 ```
 
@@ -167,6 +177,7 @@ Familiarize yourself with these commands:
 .gm on
 .gm fly on
 .modify speed 4
+.teleport orgrimmar
 ```
 
 Create a guild:
@@ -181,8 +192,6 @@ Fill the guild bank with [Traveler's Backpack](https://wotlk.evowow.com/?item=45
 ```
 .additem 4500
 ```
-
-Use ``mod-stater-guild`` to default players to your guild.
 
 ## External Links
 
