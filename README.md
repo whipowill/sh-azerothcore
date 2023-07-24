@@ -77,8 +77,9 @@ $ menu
 - Reset database
 - Pull configs
 - Edit configs
-    - The idea is to always make edits to your backup configs (``cd ~/backups/conf``) and to push those edits to the server
-    - This way if you ever have to redownload and redeploy the server, your configs are safe
+
+The idea is to always make edits to your backup configs (``cd ~/backups/conf``) and to push those edits to the server. This way if you ever have to redownload and redeploy the server, your configs are safe.
+
 - Push configs
 - Start server
 - View console
@@ -150,7 +151,7 @@ mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template
 # remove soulbound limitations
 mysql -uroot -proot --database="acore_world" --execute="UPDATE item_template SET bonding = 0 WHERE bonding = 1 OR bonding = 2;"
 # https://stackoverflow.com/questions/75048212/is-there-a-way-to-disable-item-bonding-so-they-can-be-freely-tradable
-# NOTE THAT YOU MUST DELETE YOU CACHE/ FOLDER FOR THIS TO SHOW PROPERLY
+# NOTE THAT YOU MUST DELETE YOUR CACHE FOLDER FOR THIS TO SHOW PROPERLY
 ```
 
 You can put these in a ``patch.sh`` file for easy patching after a database reset.
