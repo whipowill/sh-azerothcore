@@ -72,19 +72,20 @@ $ menu
 - Open ports
 - Download core
 - Download modules
-    - ``$ vim ~/scripts/actions/modules.sh`` to define your modules
+    - Edit ``~/scripts/actions/modules.sh`` to define your modules
 - Compile core
 - Reset database
 - Pull configs
 - Edit configs
-    - The idea is to always make edits to your backup configs (``cd ~/backups/conf``) and to push those edits to the server.  This way if you ever have to redownload and redeploy the server, your configs are safe.
+    - The idea is to always make edits to your backup configs (``cd ~/backups/conf``) and to push those edits to the server
+    - This way if you ever have to redownload and redeploy the server, your configs are safe
 - Push configs
 - Start server
 - View console
-    - Create your user using [instructions](https://www.azerothcore.org/wiki/creating-accounts)
+    - Create users using [instructions](https://www.azerothcore.org/wiki/creating-accounts)
     - Use ``ctrl-b-d`` to exit tmux
 
-Manually change the ``acore_realmlist`` record in the MySQL database to the proper name and IP address.
+Manually change the ``acore_realmlist`` record in the MySQL database to the desired name and IP address.
 
 ## How To Update
 
@@ -120,7 +121,7 @@ $ menu
 
 ## Custom Patches
 
-There are a couple database migrations that my setup requires that I note here for my reference:
+These are database tweaks that I note for my reference:
 
 ```
 # add portals to capitol cities
@@ -145,9 +146,14 @@ mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template
 mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 62,maxlevel = 62, HealthModifier = 10 WHERE entry = 466;"
 mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 62,maxlevel = 62 WHERE entry IN (34986, 16801, 16800);"
 # https://github.com/JanEbbing/azerothcore-wotlk/blob/fix-issue-set-faction-leaders-to-vanilla-stats/data/sql/updates/pending_db_world/rev_1626707176333165500.sql
+
+# remove soulbound limitations
+mysql -uroot -proot --database="acore_world" --execute="UPDATE item_template SET bonding = 0 WHERE bonding = 1 OR bonding = 2;"
+# https://stackoverflow.com/questions/75048212/is-there-a-way-to-disable-item-bonding-so-they-can-be-freely-tradable
+# NOTE THAT YOU MUST DELETE YOU CACHE/ FOLDER FOR THIS TO SHOW PROPERLY
 ```
 
-I put these in a ``patch.sh`` file that I can run for cases when I reset the database.
+You can put these in a ``patch.sh`` file for easy patching after a database reset.
 
 ## Helpful Tips
 
