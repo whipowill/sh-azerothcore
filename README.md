@@ -148,9 +148,13 @@ mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template
 mysql -uroot -proot --database="acore_world" --execute="UPDATE creature_template SET minlevel = 62,maxlevel = 62 WHERE entry IN (34986, 16801, 16800);"
 # https://github.com/JanEbbing/azerothcore-wotlk/blob/fix-issue-set-faction-leaders-to-vanilla-stats/data/sql/updates/pending_db_world/rev_1626707176333165500.sql
 
-# remove soulbound limitations
-mysql -uroot -proot --database="acore_world" --execute="UPDATE item_template SET bonding = 0 WHERE bonding = 1 OR bonding = 2;"
-# https://stackoverflow.com/questions/75048212/is-there-a-way-to-disable-item-bonding-so-they-can-be-freely-tradable
+# patch quest reward armor and weapons to have required level
+mysql -uroot -proot --database="acore_world" --execute="UPDATE item_template SET item_template.RequiredLevel=(SELECT MinLevel FROM quest_template WHERE (RewardItem1=item_template.entry OR RewardItem2=item_template.entry OR RewardItem3=item_template.entry OR RewardItem4=item_template.entry) OR (RewardChoiceItemID1=item_template.entry OR RewardChoiceItemID2=item_template.entry OR RewardChoiceItemID3=item_template.entry OR RewardChoiceItemID4=item_template.entry) ORDER BY MinLevel ASC LIMIT 1) WHERE bonding=1 AND class IN (2,4) AND RequiredLevel=0 AND EXISTS (SELECT MinLevel FROM quest_template WHERE (RewardItem1=item_template.entry OR RewardItem2=item_template.entry OR RewardItem3=item_template.entry OR RewardItem4=item_template.entry) OR (RewardChoiceItemID1=item_template.entry OR RewardChoiceItemID2=item_template.entry OR RewardChoiceItemID3=item_template.entry OR RewardChoiceItemID4=item_template.entry) ORDER BY MinLevel ASC LIMIT 1);"
+# https://www.azerothcore.org/wiki/quest_template#rewarditem1
+
+# remove soulbound limitations on armor and weapons
+mysql -uroot -proot --database="acore_world" --execute="UPDATE item_template SET bonding=0 WHERE class IN (2,4) AND bonding IN (1,2);"
+# https://www.azerothcore.org/wiki/item_template#bonding
 # NOTE THAT YOU MUST DELETE YOUR CACHE FOLDER FOR THIS TO SHOW PROPERLY
 ```
 
