@@ -17,10 +17,10 @@ git clone https://github.com/azerothcore/mod-gain-honor-guard
 git clone https://github.com/azerothcore/mod-cta-switch
 git clone https://github.com/azerothcore/mod-starter-guild
 git clone https://github.com/noisiver/mod-guildfunds
-git clone https://github.com/heyitsbench/mod-arac
+#git clone https://github.com/heyitsbench/mod-arac # over the top if you ask me
 git clone https://github.com/azerothcore/mod-pvp-titles
 git clone https://github.com/AnchyDev/DungeonRespawn
-gie clone https://github.com/dunjeon/mod-TimeIsTime
+git clone https://github.com/dunjeon/mod-TimeIsTime
 git clone https://github.com/pangolp/mod-quest-loot-party
 git clone https://github.com/Gozzim/mod-starting-pet
 git clone https://github.com/BytesGalore/mod-no-hearthstone-cooldown
