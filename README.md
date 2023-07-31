@@ -109,7 +109,7 @@ $ menu
 ## Recommended Mods
 
 - [WorldChat](https://github.com/azerothcore/mod-world-chat) - enable world chat
-- [ExpProgression](https://github.com/azerothcore/mod-progression-system) - choose your expansion
+- [ProgressionSystem](https://github.com/azerothcore/mod-progression-system) - choose your expansion
 - [AutoBalance](https://github.com/azerothcore/mod-autobalance.git) - scale dungeons down
 - [AuctionHouse](https://github.com/azerothcore/mod-ah-bot.git) - enable faux auction trades
 - [AccountMounts](https://github.com/azerothcore/mod-account-mounts) - share mounts on all toons
@@ -117,16 +117,16 @@ $ menu
 - [LearnSpells](https://github.com/noisiver/mod-learnspells) - auto learn spells
 - [SoloLFG](https://github.com/azerothcore/mod-solo-lfg.git) - use RDF w/ less than 5
 - [HonorGuard](https://github.com/azerothcore/mod-gain-honor-guard) - kill guards for honor
-- [CTASwitch](https://github.com/azerothcore/mod-cta-switch) - force call-to-arms rotation
+- [CTASwitch](https://github.com/azerothcore/mod-cta-switch) - control call-to-arms rotation
 - [StarterGuild](https://github.com/azerothcore/mod-starter-guild) - all new toons join guild
 - [GuildFunds](https://github.com/noisiver/mod-guildfunds) - tithe to the guild
 - [AllRacesAllClasses](https://github.com/heyitsbench/mod-arac) - any race can be any class
 - [PVPTitles](https://github.com/azerothcore/mod-pvp-titles) - wear vanilla pvp titles
-- [DungeonRespawn](https://github.com/AnchyDev/DungeonRespawn) - respawn at dungeon entrance
+- [DungeonRespawn](https://github.com/AnchyDev/DungeonRespawn) - no more dungeon corpse walk
 - [TimeIsTime](https://github.com/dunjeon/mod-TimeIsTime) - change length of a day
 - [LootParty](https://github.com/pangolp/mod-quest-loot-party) - quest items lootable by all
 - [StartingPet](https://github.com/Gozzim/mod-starting-pet) - hunters start game w/ pet
-- [HearthZero](https://github.com/BytesGalore/mod-no-hearthstone-cooldown) - no heathstone cooldown
+- [HearthReset](https://github.com/BytesGalore/mod-no-hearthstone-cooldown) - no heathstone cooldown
 
 You may want to peruse the [index](https://github.com/topics/azerothcore-module) of every module available.
 
