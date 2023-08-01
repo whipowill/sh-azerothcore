@@ -86,7 +86,7 @@ The idea is to always make edits to your backup configs (``cd ~/backups/conf``) 
     - Create users using [instructions](https://www.azerothcore.org/wiki/creating-accounts)
     - Use ``ctrl-b-d`` to exit tmux
 
-Manually change the ``acore_realmlist`` record in the MySQL database to the desired name and IP address.
+Manually change the ``acore_accounts.realmlist`` table in the MySQL database to reflect your desired name and IP address.
 
 ## How To Update
 
