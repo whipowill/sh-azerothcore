@@ -128,6 +128,11 @@ $ menu
 - [StartingPet](https://github.com/Gozzim/mod-starting-pet) - hunters start game w/ pet
 - [HearthReset](https://github.com/BytesGalore/mod-no-hearthstone-cooldown) - no heathstone cooldown
 
+**My Mods**
+
+- [SavageRoar](https://github.com/whipowill/wow-acore-mod-savage-roar) - buff Feral Druids
+- [NerfHerder](https://github.com/whipowill/wow-acore-mod-nerf-herder) - fix town guards over level
+
 You may want to peruse the [index](https://github.com/topics/azerothcore-module) of every module available.
 
 ## Custom Patches
