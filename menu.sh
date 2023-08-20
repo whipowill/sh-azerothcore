@@ -135,7 +135,7 @@ Config
 12) $(ColorGreen 'Nuke Configs')    - nuke ~/backups/conf
 
 Misc
-13) $(ColorGreen 'Open Ports')       - open ports 3724 and 8085
+13) $(ColorGreen 'Open Ports')      - open ports 3724 and 8085
 
 $(ColorBlue 'Action:') "
         read a

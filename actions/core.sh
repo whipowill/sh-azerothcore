@@ -4,7 +4,7 @@ sudo apt install git
 
 # prepare directory
 cd ~
-rm -rf core
+sudo rm -rf core
 
 # download playerbot core (testing)
 #git clone https://github.com/ZhengPeiRu21/azerothcore-wotlk.git core
