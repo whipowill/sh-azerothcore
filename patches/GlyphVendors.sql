@@ -1,3 +1,7 @@
+/*
+Add a mysterious group of shady goblin vendors from
+the "Inkwell Cartel" to the auction area in Gadgetzan.
+*/
 
 -- =================================================
 -- Glyph Vendor - DK
