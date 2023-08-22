@@ -11,7 +11,7 @@ DELETE FROM creature_template WHERE entry=200000;
 DELETE FROM creature WHERE id1=200000;
 DELETE FROM npc_vendor WHERE entry=200000;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Tinker Tosslecrank", "Inkwell Cartel", 40, 40, 475, 4225, 200000, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Tinker Tosslecrank", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200000, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200000, 43533);
 INSERT INTO npc_vendor (entry, item) VALUES (200000, 43534);
 INSERT INTO npc_vendor (entry, item) VALUES (200000, 43535);
@@ -54,7 +54,7 @@ DELETE FROM creature_template WHERE entry=200001;
 DELETE FROM creature WHERE id1=200001;
 DELETE FROM npc_vendor WHERE entry=200001;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Klink Goldsprocket", "Inkwell Cartel", 40, 40, 475, 4225, 200001, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Klink Goldsprocket", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200001, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200001, 40896);
 INSERT INTO npc_vendor (entry, item) VALUES (200001, 40897);
 INSERT INTO npc_vendor (entry, item) VALUES (200001, 40899);
@@ -102,7 +102,7 @@ DELETE FROM creature_template WHERE entry=200002;
 DELETE FROM creature WHERE id1=200002;
 DELETE FROM npc_vendor WHERE entry=200002;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Snickers Blastwhiz", "Inkwell Cartel", 40, 40, 475, 4225, 200002, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Snickers Blastwhiz", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200002, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200002, 42897);
 INSERT INTO npc_vendor (entry, item) VALUES (200002, 42898);
 INSERT INTO npc_vendor (entry, item) VALUES (200002, 42899);
@@ -145,7 +145,7 @@ DELETE FROM creature_template WHERE entry=200003;
 DELETE FROM creature WHERE id1=200003;
 DELETE FROM npc_vendor WHERE entry=200003;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Fizzle Whizzblast", "Inkwell Cartel", 40, 40, 475, 4225, 200003, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Fizzle Whizzblast", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200003, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200003, 42734);
 INSERT INTO npc_vendor (entry, item) VALUES (200003, 42735);
 INSERT INTO npc_vendor (entry, item) VALUES (200003, 42736);
@@ -191,7 +191,7 @@ DELETE FROM creature_template WHERE entry=200004;
 DELETE FROM creature WHERE id1=200004;
 DELETE FROM npc_vendor WHERE entry=200004;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Ratchet Geargrin", "Inkwell Cartel", 40, 40, 475, 4225, 200004, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Ratchet Geargrin", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200004, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200004, 41092);
 INSERT INTO npc_vendor (entry, item) VALUES (200004, 41094);
 INSERT INTO npc_vendor (entry, item) VALUES (200004, 41095);
@@ -235,7 +235,7 @@ DELETE FROM creature_template WHERE entry=200005;
 DELETE FROM creature WHERE id1=200005;
 DELETE FROM npc_vendor WHERE entry=200005;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Bling Blingerson", "Inkwell Cartel", 40, 40, 475, 4225, 200005, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Bling Blingerson", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200005, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200005, 42954);
 INSERT INTO npc_vendor (entry, item) VALUES (200005, 42955);
 INSERT INTO npc_vendor (entry, item) VALUES (200005, 42956);
@@ -279,7 +279,7 @@ DELETE FROM creature_template WHERE entry=200006;
 DELETE FROM creature WHERE id1=200006;
 DELETE FROM npc_vendor WHERE entry=200006;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Sparky Boomflame", "Inkwell Cartel", 40, 40, 475, 4225, 200006, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Sparky Boomflame", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200006, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200006, 41517);
 INSERT INTO npc_vendor (entry, item) VALUES (200006, 41518);
 INSERT INTO npc_vendor (entry, item) VALUES (200006, 41524);
@@ -324,7 +324,7 @@ DELETE FROM creature_template WHERE entry=200007;
 DELETE FROM creature WHERE id1=200007;
 DELETE FROM npc_vendor WHERE entry=200007;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Razzle Quickfuse", "Inkwell Cartel", 40, 40, 475, 4225, 200007, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Razzle Quickfuse", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200007, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200007, 42453);
 INSERT INTO npc_vendor (entry, item) VALUES (200007, 42454);
 INSERT INTO npc_vendor (entry, item) VALUES (200007, 42455);
@@ -369,7 +369,7 @@ DELETE FROM creature_template WHERE entry=200008;
 DELETE FROM creature WHERE id1=200008;
 DELETE FROM npc_vendor WHERE entry=200008;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Gizmo Gearspark", "Inkwell Cartel", 40, 40, 475, 4225, 200008, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Gizmo Gearspark", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200008, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200008, 43395);
 INSERT INTO npc_vendor (entry, item) VALUES (200008, 43396);
 INSERT INTO npc_vendor (entry, item) VALUES (200008, 43397);
@@ -413,7 +413,7 @@ DELETE FROM creature_template WHERE entry=200009;
 DELETE FROM creature WHERE id1=200009;
 DELETE FROM npc_vendor WHERE entry=200009;
 
-INSERT INTO creature_template (modelid1, name, subname, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Zipp Gearwrench", "Inkwell Cartel", 40, 40, 475, 4225, 200009, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7164, "Zipp Gearwrench", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200009, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 42396);
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 42397);
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 42398);
@@ -449,17 +449,17 @@ INSERT INTO npc_vendor (entry, item) VALUES (200009, 45758);
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 45760);
 
 -- place glyph vendors in Gadgetzan
-INSERT INTO `creature` (`guid`, `id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES
-(3200527, 200007, 0, 0, 1, 0, 0, 1, 1, 0, -7237.65, -3796.53, -1.12499, 5.99672, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200526, 200004, 0, 0, 1, 0, 0, 1, 1, 0, -7238.21, -3810.7, -1.12405, 0.648164, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200523, 200008, 0, 0, 1, 0, 0, 1, 1, 0, -7218.75, -3811.8, -1.12598, 2.55906, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200522, 200000, 0, 0, 1, 0, 0, 1, 1, 0, -7218.66, -3795.85, -1.12574, 3.76229, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200521, 200005, 0, 0, 1, 0, 0, 1, 1, 0, -7225.75, -3792.8, 0.760523, 5.2569, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200520, 200002, 0, 0, 1, 0, 0, 1, 1, 0, -7222.31, -3793.67, 0.760935, 4.01362, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200519, 200009, 0, 0, 1, 0, 0, 1, 1, 0, -7233.97, -3814.19, 0.760343, 0.74571, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200518, 200003, 0, 0, 1, 0, 0, 1, 1, 0, -7233.61, -3792.97, 0.759746, 5.54866, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200517, 200001, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(3200516, 200006, 0, 0, 1, 0, 0, 1, 1, 0, -7226.03, -3814.59, 0.761188, 1.42316, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL);
+INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES
+(200007, 0, 0, 1, 0, 0, 1, 1, 0, -7237.65, -3796.53, -1.12499, 5.99672, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200004, 0, 0, 1, 0, 0, 1, 1, 0, -7238.21, -3810.7, -1.12405, 0.648164, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200008, 0, 0, 1, 0, 0, 1, 1, 0, -7218.75, -3811.8, -1.12598, 2.55906, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200000, 0, 0, 1, 0, 0, 1, 1, 0, -7218.66, -3795.85, -1.12574, 3.76229, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200005, 0, 0, 1, 0, 0, 1, 1, 0, -7225.75, -3792.8, 0.760523, 5.2569, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200002, 0, 0, 1, 0, 0, 1, 1, 0, -7222.31, -3793.67, 0.760935, 4.01362, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200009, 0, 0, 1, 0, 0, 1, 1, 0, -7233.97, -3814.19, 0.760343, 0.74571, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200003, 0, 0, 1, 0, 0, 1, 1, 0, -7233.61, -3792.97, 0.759746, 5.54866, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200001, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200006, 0, 0, 1, 0, 0, 1, 1, 0, -7226.03, -3814.59, 0.761188, 1.42316, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL);
 
 -- make vendor prices half of required level in gold
 UPDATE item_template
