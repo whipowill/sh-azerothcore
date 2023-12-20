@@ -7,3 +7,6 @@ UPDATE item_template SET item_template.RequiredLevel=(SELECT MinLevel FROM quest
 UPDATE item_template SET bonding=0 WHERE class IN (2,4) AND bonding IN (1,2);
 # https://www.azerothcore.org/wiki/item_template#bonding
 # NOTE THAT YOU MUST DELETE YOUR CACHE FOLDER FOR THIS TO SHOW PROPERLY
+
+# delete Satchel of Helpful Goods (bc this circumvents lvl req) THIS COULD BE DONE BETTER
+DELETE FROM lfg_dungeon_rewards WHERE 1=1;
