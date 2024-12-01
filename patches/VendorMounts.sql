@@ -8,10 +8,18 @@ Add a mysterious male goblin vendor named
 -- =================================================
 
 DELETE FROM creature_template WHERE entry=200011;
+DELETE FROM creature_template_model WHERE CreatureID=200011;
 DELETE FROM creature WHERE id1=200011;
 DELETE FROM npc_vendor WHERE entry=200011;
 
-INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7993, "Felix Sunstreak", "Exotic Mounts", "Buy", 40, 40, 475, 4225, 200011, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+-- Insert into creature_template
+INSERT INTO creature_template (entry, name, subname, IconName, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
+VALUES (200011, "Felix Sunstreak", "Exotic Mounts", "Buy", 40, 40, 475, 4225, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+
+-- Insert into creature_template_model
+INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
+VALUES (200011, 0, 7993, 1, 1);
+
 INSERT INTO npc_vendor (entry, item) VALUES (200011, 33976);
 INSERT INTO npc_vendor (entry, item) VALUES (200011, 33999);
 INSERT INTO npc_vendor (entry, item) VALUES (200011, 34060);

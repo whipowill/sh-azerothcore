@@ -8,10 +8,18 @@ Add a mysterious female goblin vendor named
 -- =================================================
 
 DELETE FROM creature_template WHERE entry=200010;
+DELETE FROM creature_template_model WHERE CreatureID=200010;
 DELETE FROM creature WHERE id1=200010;
 DELETE FROM npc_vendor WHERE entry=200010;
 
-INSERT INTO creature_template (modelid1, name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild) VALUES (7175, "Glimmer Goldshine", "Tabard Collector", "Buy", 40, 40, 475, 4225, 200010, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+-- Insert into creature_template
+INSERT INTO creature_template (entry, name, subname, IconName, minlevel, maxlevel, faction, npcflag, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
+VALUES (200010, "Glimmer Goldshine", "Tabard Collector", "Buy", 40, 40, 475, 4225, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+
+-- Insert into creature_template_model
+INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
+VALUES (200010, 0, 7175, 1, 1);
+
 INSERT INTO npc_vendor (entry, item) VALUES (200010, 5976);
 INSERT INTO npc_vendor (entry, item) VALUES (200010, 11364);
 INSERT INTO npc_vendor (entry, item) VALUES (200010, 15196);

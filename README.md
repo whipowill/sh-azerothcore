@@ -6,7 +6,7 @@ Provisioning a World of Warcraft server is pretty complicated, and after studyin
 
 ## Install
 
-- Provision fresh Ubuntu 20.04 LTS server.
+- Provision fresh Ubuntu LTS server.
 - Connect as ``root``:
 
 ```
@@ -31,7 +31,7 @@ $ ssh azeroth@YOURSERVERIP
 
 ```
 $ sudo apt update
-$ sudo apt install git zip rename mysql-server
+$ sudo apt install git zip rename mysql-server cmake build-essential libssl-dev libmysqlclient-dev clang libboost-all-dev libreadline-dev
 ```
 
 - Change MySQL ``root`` password:

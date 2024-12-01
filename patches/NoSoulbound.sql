@@ -9,4 +9,4 @@ UPDATE item_template SET bonding=0 WHERE class IN (2,4) AND bonding IN (1,2);
 # NOTE THAT YOU MUST DELETE YOUR CACHE FOLDER FOR THIS TO SHOW PROPERLY
 
 # delete Satchel of Helpful Goods (bc this circumvents lvl req) THIS COULD BE DONE BETTER
-DELETE FROM lfg_dungeon_rewards WHERE 1=1;
+#DELETE FROM lfg_dungeon_rewards WHERE 1=1;
