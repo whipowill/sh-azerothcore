@@ -6,14 +6,8 @@ sudo apt install git
 cd ~
 sudo rm -rf core
 
-# download playerbot core (testing)
-#git clone https://github.com/ZhengPeiRu21/azerothcore-wotlk.git core
-#cd core
-#git checkout Playerbot
-#git pull origin Playerbot
-
 # download core
-git clone https://github.com/azerothcore/azerothcore-wotlk.git core
+git clone https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots.git --depth 1
 
 # install dependencies
 ~/core/acore.sh install-deps
