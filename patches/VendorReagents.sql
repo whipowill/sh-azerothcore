@@ -1,6 +1,6 @@
 UPDATE `creature_template` SET
     `name` = 'Quartermaster',
-    `subname` = 'Reagent Banker',
+    `subname` = 'Guild Reagents',
     `minlevel` = 40,
     `maxlevel` = 40
 WHERE `entry` = 290011;
