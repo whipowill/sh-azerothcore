@@ -4,7 +4,11 @@ UPDATE item_template SET item_template.RequiredLevel=(SELECT MinLevel FROM quest
 # ^^ note that this query can take several minutes to run!
 
 # remove soulbound limitations on armor and weapons
-UPDATE item_template SET bonding=0 WHERE class IN (2,4) AND bonding IN (1,2);
+#UPDATE item_template SET bonding=0 WHERE class IN (2,4) AND bonding IN (1,2);
+
+# remove soulbound from EVERYTHING
+UPDATE item_template SET bonding=0 WHERE bonding IN (1,2);
+
 # https://www.azerothcore.org/wiki/item_template#bonding
 # NOTE THAT YOU MUST DELETE YOUR CACHE FOLDER FOR THIS TO SHOW PROPERLY
 
