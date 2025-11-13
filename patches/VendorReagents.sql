@@ -1,3 +1,6 @@
+-- Changes appearance of NPC from this mod:
+-- https://github.com/biosfree/mod-reagent-bank-account
+
 UPDATE `creature_template` SET
     `name` = 'Quartermaster',
     `subname` = 'Guild Reagents',

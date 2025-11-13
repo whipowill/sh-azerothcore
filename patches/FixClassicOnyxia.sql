@@ -1,3 +1,7 @@
+-- What was happening is the 60 version of Onyxia's Lair jacked up the AutoBalance
+-- mod bc they were lower level than expected.  So I revert them back to high level.
+-- This was bc of changes made to the raid by mod-progression-system.
+
 -- redo what progression system did
 
 -- Onyxia
@@ -181,10 +185,6 @@ UPDATE `quest_template_addon` SET `SpecialFlags` = 0 WHERE `id` = 7509;
 UPDATE `creature_template` SET `minlevel` = 83, `maxlevel` = 83 WHERE `entry` = 10184; -- Onyxia
 UPDATE `creature_template` SET `minlevel` = 80, `maxlevel` = 80 WHERE `entry` = 11262; -- Onyxian Whelps
 UPDATE `creature_template` SET `minlevel` = 80, `maxlevel` = 80 WHERE `entry` = 12129; -- Onyxian Warder
-
--- What was happening is the 60 version of Onyxia's Lair jacked up the AutoBalance
--- mod bc they were lower level than expected.  So I revert them back to high level.
--- This was bc of changes made to the raid by mod-progression-system.
 
 -- remove requirements
 DELETE FROM `dungeon_access_requirements` WHERE `dungeon_access_id` = 15;
