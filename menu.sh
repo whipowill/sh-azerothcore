@@ -1,81 +1,85 @@
 #!/bin/bash
 
+# Get the directory where menu.sh is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$SCRIPT_DIR/.."
+
 function option1() {
     echo ""
-    bash ~/scripts/actions/start.sh
+    bash "$BASE_DIR/scripts/actions/start.sh" "$BASE_DIR"
     echo ""
 }
 
 function option2() {
     echo ""
-    bash ~/scripts/actions/stop.sh
+    bash "$BASE_DIR/scripts/actions/stop.sh" "$BASE_DIR"
     echo ""
 }
 
 function option3() {
     echo ""
-    bash ~/scripts/actions/view.sh
+    bash "$BASE_DIR/scripts/actions/view.sh" "$BASE_DIR"
     echo ""
 }
 
 function option4() {
     echo ""
-    bash ~/scripts/actions/core.sh
+    bash "$BASE_DIR/scripts/actions/core.sh" "$BASE_DIR"
     echo ""
 }
 
 function option5() {
     echo ""
-    bash ~/scripts/actions/modules.sh
+    bash "$BASE_DIR/scripts/actions/modules_sample.sh" "$BASE_DIR"
     echo ""
 }
 
 function option6() {
     echo ""
-    bash ~/scripts/actions/compile.sh
+    bash "$BASE_DIR/scripts/actions/compile.sh" "$BASE_DIR"
     echo ""
 }
 
 function option7() {
     echo ""
-    bash ~/scripts/actions/db_reset.sh
+    bash "$BASE_DIR/scripts/actions/db_reset.sh" "$BASE_DIR"
     echo ""
 }
 
 function option8() {
     echo ""
-    bash ~/scripts/actions/db_export.sh
+    bash "$BASE_DIR/scripts/actions/db_export.sh" "$BASE_DIR"
     echo ""
 }
 
 function option9() {
     echo ""
-    bash ~/scripts/actions/db_import.sh
+    bash "$BASE_DIR/scripts/actions/db_import.sh" "$BASE_DIR"
     echo ""
 }
 
 function option10() {
     echo ""
-    bash ~/scripts/actions/conf_init.sh
-    bash ~/scripts/actions/conf_pull.sh
+    bash "$BASE_DIR/scripts/actions/conf_init.sh" "$BASE_DIR"
+    bash "$BASE_DIR/scripts/actions/conf_pull.sh" "$BASE_DIR"
     echo ""
 }
 
 function option11() {
     echo ""
-    bash ~/scripts/actions/conf_push.sh
+    bash "$BASE_DIR/scripts/actions/conf_push.sh" "$BASE_DIR"
     echo ""
 }
 
 function option12() {
     echo ""
-    bash ~/scripts/actions/conf_nuke.sh
+    bash "$BASE_DIR/scripts/actions/conf_nuke.sh" "$BASE_DIR"
     echo ""
 }
 
 function option13() {
     echo ""
-    bash ~/scripts/actions/firewall.sh
+    bash "$BASE_DIR/scripts/actions/firewall.sh" "$BASE_DIR"
     echo ""
 }
 
@@ -120,19 +124,19 @@ Server
 3) $(ColorGreen 'View Console')     - view worldserver session (ctrl-b-d to exit)
 
 Core
-4) $(ColorGreen 'Download Core')    - download to ~/core
-5) $(ColorGreen 'Download Modules') - download to ~/core/modules (vim ~/scripts/actions/modules.sh to choose your modules)
+4) $(ColorGreen 'Download Core')    - download the core
+5) $(ColorGreen 'Download Modules') - download modules (vim <DIR>/scripts/actions/modules.sh to define your modules)
 6) $(ColorGreen 'Compile Server')   - compile the server
 
 Database
 7) $(ColorGreen 'Reset Database')   - drop tables (but not accounts)
-8) $(ColorGreen 'Export Database')  - export to ~/backups/db/azerothcore.sql
-9) $(ColorGreen 'Import Database')  - import from ~/backups/db/azerothcore.sql
+8) $(ColorGreen 'Export Database')  - export to <DIR>/backups/db/azerothcore.sql
+9) $(ColorGreen 'Import Database')  - import from <DIR>/backups/db/azerothcore.sql
 
 Config
-10) $(ColorGreen 'Pull Configs')    - copy from ~/core/env/dist/etc/ to ~/backups/conf (will not overwrite existing)
-11) $(ColorGreen 'Push Configs')    - copy from ~/backups/conf to ~/core/env/dist/etc/
-12) $(ColorGreen 'Nuke Configs')    - nuke ~/backups/conf
+10) $(ColorGreen 'Pull Configs')    - copy from <DIR>/core/env/dist/etc/ to <DIR>/backups/conf (will not overwrite existing)
+11) $(ColorGreen 'Push Configs')    - copy from <DIR>/backups/conf to <DIR>/core/env/dist/etc/
+12) $(ColorGreen 'Nuke Configs')    - nuke backups/conf
 
 Misc
 13) $(ColorGreen 'Open Ports')      - open ports 3724 and 8085

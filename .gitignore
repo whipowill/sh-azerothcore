@@ -5,3 +5,4 @@ reset.sh
 push.sh
 pull.sh
 save.sh
+.aider*

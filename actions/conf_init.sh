@@ -1,7 +1,8 @@
-sudo chmod -R 777 ~/core/env/dist/etc/
+BASE_DIR="$1"
+sudo chmod -R 777 "$BASE_DIR/core/env/dist/etc/"
 
 # move to directory
-cd ~/core/env/dist/etc/
+cd "$BASE_DIR/core/env/dist/etc/"
 rm -rf *_copy
 rm -rf *.conf
 for i in *.conf.dist
@@ -12,7 +13,7 @@ rename 's/.conf.dist_copy/.conf/' *
 rm -rf *.dist_copy
 
 ## move to modules
-cd ~/core/env/dist/etc/modules/
+cd "$BASE_DIR/core/env/dist/etc/modules/"
 rm -rf *_copy
 rm -rf *.conf
 for i in *.conf.dist

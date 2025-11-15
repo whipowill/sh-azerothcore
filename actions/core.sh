@@ -2,21 +2,23 @@
 sudo apt update
 sudo apt install git
 
+BASE_DIR="$1"
+
 # prepare directory
-cd ~
+cd "$BASE_DIR"
 sudo rm -rf core
 
 # download core
-git clone https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots.git --depth 1
+git clone https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots.git core --depth 1
 
 # install dependencies
-~/core/acore.sh install-deps
+"$BASE_DIR/core/acore.sh" install-deps
 
 # install game files
-~/core/acore.sh client-data
+"$BASE_DIR/core/acore.sh" client-data
 
 # make logs folder
-mkdir ~/logs
+mkdir "$BASE_DIR/logs"
 
 # make backups folder
-mkdir ~/backups
+mkdir "$BASE_DIR/backups"

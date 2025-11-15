@@ -1,5 +1,6 @@
 # move to modules folder
-cd /home/azeroth/core/modules
+BASE_DIR="$1"
+cd "$BASE_DIR/core/modules"
 
 # delete existing
 rm -rf -- ./*/

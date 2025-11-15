@@ -5,7 +5,8 @@ UPDATE `creature_template` SET
     `name` = 'Quartermaster',
     `subname` = 'Guild Reagents',
     `minlevel` = 40,
-    `maxlevel` = 40
+    `maxlevel` = 40,
+    `faction` = 35
 WHERE `entry` = 290011;
 
 UPDATE `creature_template_model` SET

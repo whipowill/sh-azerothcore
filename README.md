@@ -1,6 +1,6 @@
 # AzerothCore
 
-Provisioning a World of Warcraft server is pretty complicated, and after studying several options for how to do this I decided to roll w/ [AzerothCore](https://www.azerothcore.org/).  I built a helper bash script that makes it easy to install and maintain the server.
+A helper bash script for installing and maintaining an Azerothcore server.
 
 ![AzerothCore Helper Script](https://i.imgur.com/hAfugvT.png)
 
@@ -34,12 +34,19 @@ $ sudo apt update
 $ sudo apt install git zip rename mysql-server cmake build-essential libssl-dev libmysqlclient-dev clang libboost-all-dev libreadline-dev
 ```
 
-- Change MySQL ``root`` password:
+- Create MySQL ``acore`` user and server database:
 
 ```
-$ sudo mysql
-> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
-> exit;
+$ sudo mysql -uroot
+
+DROP USER IF EXISTS 'acore'@'localhost';
+DROP USER IF EXISTS 'acore'@'127.0.0.1';
+CREATE USER 'acore'@'localhost' IDENTIFIED WITH mysql_native_password BY 'acore';
+CREATE USER 'acore'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY 'acore';
+GRANT ALL PRIVILEGES ON * . * TO 'acore'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON * . * TO 'acore'@'127.0.0.1' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+exit;
 ```
 
 - Download my helper scripts:
@@ -138,6 +145,10 @@ You may want to peruse the [index](https://github.com/topics/azerothcore-module)
 ## Custom Patches
 
 Note the ``patches/`` directory which includes various database migrations I've found along the way that you might find helpful.
+
+```
+$ mysql -uacore -pacore acore_world < nameofpatch.sql
+```
 
 ## External Links
 

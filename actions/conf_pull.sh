@@ -1,14 +1,15 @@
+BASE_DIR="$1"
 # make directory if doesn't exist
-mkdir /home/azeroth/backups/conf
+mkdir -p "$BASE_DIR/backups/conf"
 
 # backup conf files from live (do not overwrite)
-cp -Rn ~/core/env/dist/etc/* ~/backups/conf/.
+cp -Rn "$BASE_DIR/core/env/dist/etc/"* "$BASE_DIR/backups/conf/."
 
 # cleanup
-cd /home/azeroth/backups/conf
+cd "$BASE_DIR/backups/conf"
 rm -rf *.dist
-cd /home/azeroth/backups/conf/modules
+cd "$BASE_DIR/backups/conf/modules"
 rm -rf *.dist
 
 # make sure we have permissions to edit
-sudo chmod -R 777 ~/backups/conf/
+sudo chmod -R 777 "$BASE_DIR/backups/conf/"

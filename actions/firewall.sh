@@ -1,3 +1,4 @@
+BASE_DIR="$1"
 sudo apt update
 sudo apt install iptables-persistent
 sudo iptables -F

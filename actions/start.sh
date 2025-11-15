@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-sh ~/scripts/actions/stop.sh
+BASE_DIR="$1"
 
-authserver="~/core/acore.sh run-authserver"
-worldserver="~/core/acore.sh run-worldserver"
+bash "$BASE_DIR/actions/stop.sh" "$BASE_DIR"
+
+authserver="$BASE_DIR/core/acore.sh run-authserver"
+worldserver="$BASE_DIR/core/acore.sh run-worldserver"
 
 authserver_session="auth-session"
 worldserver_session="world-session"
