@@ -1,4 +1,4 @@
 tmux kill-server
 
-# potential race condition i think
+# potential race condition I think
 sleep 5

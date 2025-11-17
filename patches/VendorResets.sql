@@ -1,6 +1,11 @@
 -- Changes appearance of NPC from this mod:
 -- https://github.com/azerothcore/mod-instance-reset
 
+/*
+Add a mysterious female gnome vendor named
+"Zazzle Timewrench" who will reset instances in Gadgetzan.
+*/
+
 UPDATE `creature_template` SET
     `name` = 'Zazzle Timewrench',
     `subname` = 'Time Traveler',

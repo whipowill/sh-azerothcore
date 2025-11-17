@@ -1,6 +1,10 @@
 -- Changes appearance of NPC from this mod:
 -- https://github.com/biosfree/mod-reagent-bank-account
 
+/*
+Creates new Quartermaster NPCs in capitol towns ear bank.
+*/
+
 UPDATE `creature_template` SET
     `name` = 'Quartermaster',
     `subname` = 'Guild Reagents',

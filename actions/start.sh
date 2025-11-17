@@ -2,7 +2,7 @@
 
 BASE_DIR="$1"
 
-bash "$BASE_DIR/actions/stop.sh" "$BASE_DIR"
+bash "$BASE_DIR/scripts/actions/stop.sh"
 
 authserver="$BASE_DIR/core/acore.sh run-authserver"
 worldserver="$BASE_DIR/core/acore.sh run-worldserver"
