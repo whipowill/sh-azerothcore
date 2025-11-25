@@ -2,19 +2,19 @@
 -- https://github.com/biosfree/mod-reagent-bank-account
 
 /*
-Creates new Quartermaster NPCs in capitol towns ear bank.
+Creates new Quartermaster NPCs in capitol towns near bank.
 */
 
 UPDATE `creature_template` SET
-    `name` = 'Quartermaster',
-    `subname` = 'Guild Reagents',
+    `name` = 'Penny Packrat',
+    `subname` = 'Quartermaster',
     `minlevel` = 40,
     `maxlevel` = 40,
     `faction` = 35
 WHERE `entry` = 290011;
 
 UPDATE `creature_template_model` SET
-    `CreatureDisplayID` = 11389,
+    `CreatureDisplayID` = 22438,
     `DisplayScale` = 1,
     `Probability` = 1
 WHERE `CreatureID` = 290011;

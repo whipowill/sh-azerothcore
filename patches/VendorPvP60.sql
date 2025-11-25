@@ -1,12 +1,50 @@
 -- This script fixes lvl 60 classic legacy pvp vendors
 -- to make epic gear items 4x as expensive
 
--- this initial part is a reset from:
--- https://raw.githubusercontent.com/azerothcore/mod-progression-system/main/src/Bracket_61_64/sql/world/progression_61_64_npc_vendor_PvP.sql
+-- /////////////////////////////////////////////////
+
+-- Hiding unused WOTLK PvP vendors.  The only way to undo this is to
+-- erase world and start over.
+
+-- 34060 Doris Volanthius (Horde) (lvl 80)
+-- 34078 Lieutenant Tristia (Alliance) (lvl 80)
+-- 34063 Blood Guard Zar'shi (Horde) (lvl 80)
+-- 34084 Knight-Lieutenant Moonstrike (Alliance) (lvl 80)
+-- 34038 Sergeant Thunderhorn (Horde) (lvl 80)
+-- 34075 Captain Dirgehammer (Alliance) (lvl 80)
+-- 34043 Lady Palanseer (Horde) - jewel crafting vendor (lvl 80)
+-- 34081 Captain O'Neal (Alliance) - jewel crafting vendor (lvl 80)
+-- 12796 Raider Bork (Horde) - honor mount vendor (lvl 80) < -- do not hide
+-- 12783 Lieutenant Karter (Alliance) - honor mount vendor (lvl 80) < -- do not hide
+-- 12788 Legionnaire Teena (Horde) - tbc armor honor vendor (lvl 70)
+-- 12778 Lieutenant Rachel Vaccar (Alliance) - tbc armor honor vendor (lvl 70)
+-- 33934 Ecton Brasstumbler (Neutral) - arena points vendor gadgetzan (lvl 80)
+-- 33935 Evee Copperspring (Neutral) - arena points vendor gadgetzan (lvl 80)
+-- 33939 Argex Irongut (Neutral) - arena points vendor gadgetzan (lvl 80)
+-- 34093 Blazzek the Biter (Neutral) - arena points vendor gadgetzan (lvl 80)
+
+-- Hide WOTLK vendors
+DELETE FROM `creature` WHERE `id1` IN (34060, 34078, 34063, 34084, 34038, 34075, 34043, 34081, 33934, 33935, 33939, 34093);
+
+-- Hide useless lvl 70 vendors
+DELETE FROM `creature` WHERE `id1` IN (12778, 12788);
+
+-- Hide the lvl 80 vendors in Area 52
+
+-- 33941 Leeni "Smiley" Smalls
+-- 33933 Big Zokk Torquewrench
+-- Evee Copperspring (does not appear in Azerothcore default?)
+-- 33940 Kezzik the Striker
+-- 34094 Grex Brainboiler
+
+DELETE FROM `creature` WHERE `id1` IN (33941, 33933, 33940, 34094);
 
 -- /////////////////////////////////////////////////
 
--- undo progression mod changes to legacy vendors
+-- I took this from here:
+-- https://raw.githubusercontent.com/azerothcore/mod-progression-system/main/src/Bracket_61_64/sql/world/progression_61_64_npc_vendor_PvP.sql
+
+-- Re-add vendor flags to legacy weapons vendor
 UPDATE `creature_template` SET `npcflag`=`npcflag`|128 WHERE (`entry` IN (12784, 12794));
 
 -- Restore all Legacy PvP vendor inventories to original WotLK values

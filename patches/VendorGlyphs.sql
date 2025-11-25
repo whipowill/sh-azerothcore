@@ -58,57 +58,60 @@ INSERT INTO npc_vendor (entry, item) VALUES (200000, 45806);
 -- Glyph Vendor - Druid
 -- =================================================
 
-DELETE FROM creature_template WHERE entry=200001;
-DELETE FROM creature_template_model WHERE CreatureID=200001;
-DELETE FROM creature WHERE id1=200001;
-DELETE FROM npc_vendor WHERE entry=200001;
+-- I changed the ID on this one so it doesn't conflict w/
+-- the vendor from Improved Bank mod.
+
+DELETE FROM creature_template WHERE entry=200010;
+DELETE FROM creature_template_model WHERE CreatureID=200010;
+DELETE FROM creature WHERE id1=200010;
+DELETE FROM npc_vendor WHERE entry=200010;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Klink Goldsprocket", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200001, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Klink Goldsprocket", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200010, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200001, 0, 7164, 1, 1);
+VALUES (200010, 0, 7164, 1, 1);
 
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40896);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40897);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40899);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40900);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40901);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40902);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40903);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40906);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40908);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40909);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40912);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40913);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40914);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40915);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40916);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40919);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40920);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40921);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40922);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40923);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 40924);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43316);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43331);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43332);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43334);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43335);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 43674);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 44922);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 44928);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45601);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45602);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45603);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45604);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45622);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 45623);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 46372);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 48720);
-INSERT INTO npc_vendor (entry, item) VALUES (200001, 50125);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40896);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40897);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40899);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40900);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40901);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40902);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40903);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40906);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40908);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40909);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40912);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40913);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40914);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40915);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40916);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40919);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40920);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40921);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40922);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40923);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 40924);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43316);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43331);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43332);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43334);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43335);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 43674);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 44922);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 44928);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45601);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45602);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45603);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45604);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45622);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 45623);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 46372);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 48720);
+INSERT INTO npc_vendor (entry, item) VALUES (200010, 50125);
 
 -- =================================================
 -- Glyph Vendor - Hunter
@@ -538,7 +541,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (200002, 0, 0, 1, 0, 0, 1, 1, 0, -7222.31, -3793.67, 0.760935, 4.01362, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200009, 0, 0, 1, 0, 0, 1, 1, 0, -7233.97, -3814.19, 0.760343, 0.74571, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200003, 0, 0, 1, 0, 0, 1, 1, 0, -7233.61, -3792.97, 0.759746, 5.54866, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(200001, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200010, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200006, 0, 0, 1, 0, 0, 1, 1, 0, -7226.03, -3814.59, 0.761188, 1.42316, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL);
 
 -- make vendor prices half of required level in gold
