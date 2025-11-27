@@ -46,9 +46,9 @@ DELETE FROM `creature` WHERE `id1` IN (33941, 33933, 33940, 34094);
 
 -- I took this from here:
 -- https://github.com/azerothcore/mod-progression-system/pull/273
+-- THEN I MODIFIED THE ARENA POINT ITEMS TO NOT REQUIRE RATING
+-- BC I DON'T HAVE A FULLY WORKING ARENA SYSTEM
 
--- To disable a vendor for a given season just comment out the creature and game_event_creature lines.
--- Prices are set further down.
 -- IDs
 SET @NPC_ARMOR_ALLIANCE      := 12777; -- Captain Dirgehammer
 SET @NPC_ACCESSORY_ALLIANCE  := 12805; -- Officer Areyn (already has inventory)
@@ -427,32 +427,32 @@ SET @EXT_ARM_SEASON_TWO_05_4 := 2277; -- Season 4: 12000 Honor - Hands
 		Present in 2 seasons
 */
 /*-------------------------------SEASON 3---------------------------------*/
-SET @EXT_WEP_SEASON_THREE_01_3 := 2282; -- Season 3: 3750 Arena, 1850 Rating - Two-Handed
-SET @EXT_WEP_SEASON_THREE_02_3 := 1757; -- Season 3: 3150 Arena, 1850 Rating - MH (Spellpower)
-SET @EXT_WEP_SEASON_THREE_03_3 := 1432; -- Season 3: 1125 Arena, 1850 Rating - OH (Spellpower)
-SET @EXT_WEP_SEASON_THREE_04_3 := 1670; -- Season 3: 2625 Arena, 1850 Rating - MH (Melee)
-SET @EXT_WEP_SEASON_THREE_05_3 := 1432; -- Season 3: 1125 Arena, 1850 Rating - OH (Melee)
-SET @EXT_WEP_SEASON_THREE_06_3 := 1431; -- Season 3: 1875 Arena, 1850 Rating - Shield
+SET @EXT_WEP_SEASON_THREE_01_3 := 1664; -- OG VALUE 2282; -- Season 3: 3750 Arena, 1850 Rating - Two-Handed
+SET @EXT_WEP_SEASON_THREE_02_3 := 2284; -- OG VALUE 1757; -- Season 3: 3150 Arena, 1850 Rating - MH (Spellpower)
+SET @EXT_WEP_SEASON_THREE_03_3 := 2286; -- OG VALUE 1432; -- Season 3: 1125 Arena, 1850 Rating - OH (Spellpower)
+SET @EXT_WEP_SEASON_THREE_04_3 := 2287; -- OG VALUE 1670; -- Season 3: 2625 Arena, 1850 Rating - MH (Melee)
+SET @EXT_WEP_SEASON_THREE_05_3 := 2286; -- OG VALUE 1432; -- Season 3: 1125 Arena, 1850 Rating - OH (Melee)
+SET @EXT_WEP_SEASON_THREE_06_3 := 2285; -- OG VALUE 1431; -- Season 3: 1875 Arena, 1850 Rating - Shield
 SET @EXT_WEP_SEASON_THREE_07_3 := 1758; -- Season 3: 1000 Arena - Relic, Thrown, Wand
-SET @EXT_WEP_SEASON_THREE_08_3 := 2282; -- Season 3: 3750 Arena, 1850 Rating - Ranged Weapon
+SET @EXT_WEP_SEASON_THREE_08_3 := 1664; -- OG VALUE 2282; -- Season 3: 3750 Arena, 1850 Rating - Ranged Weapon
 SET @EXT_WEP_SEASON_THREE_09_3 := 1758; -- Season 3: 1000 Arena - Hunter/DK 2-Handed Melee Weapon (Waraxe)
 SET @EXT_ARM_SEASON_THREE_01_3 := 2285; -- Season 3: 1875 Arena - Head
-SET @EXT_ARM_SEASON_THREE_02_3 := 1435; -- Season 3: 1500 Arena, 1800 Rating - Shoulders
+SET @EXT_ARM_SEASON_THREE_02_3 := 2288; -- OG VALUE 1435; -- Season 3: 1500 Arena, 1800 Rating - Shoulders
 SET @EXT_ARM_SEASON_THREE_03_3 := 2285; -- Season 3: 1875 Arena - Chest
 SET @EXT_ARM_SEASON_THREE_04_3 := 2285; -- Season 3: 1875 Arena - Legs
 SET @EXT_ARM_SEASON_THREE_05_3 := 2286; -- Season 3: 1125 Arena - Hands
 /*-------------------------------SEASON 4---------------------------------*/
-SET @EXT_WEP_SEASON_THREE_01_4 := 2386; -- Season 4: 3000 Arena, 1800 Rating - Two-Handed
-SET @EXT_WEP_SEASON_THREE_02_4 := 2385; -- Season 4: 2520 Arena, 1800 Rating - MH (Spellpower)
-SET @EXT_WEP_SEASON_THREE_03_4 := 2390; -- Season 4: 900 Arena, 1800 Rating - OH (Spellpower)
-SET @EXT_WEP_SEASON_THREE_04_4 := 2389; -- Season 4: 2100 Arena, 1800 Rating - MH (Melee)
-SET @EXT_WEP_SEASON_THREE_05_4 := 2390; -- Season 4: 900 Arena, 1800 Rating - OH (Melee)
-SET @EXT_WEP_SEASON_THREE_06_4 := 2391; -- Season 4: 1500 Arena, 1800 Rating - Shield
+SET @EXT_WEP_SEASON_THREE_01_4 := 2284; -- OG VALUE 2386, Change is 3150 Arena bc I couldn't find 3000; -- Season 4: 3000 Arena, 1800 Rating - Two-Handed
+SET @EXT_WEP_SEASON_THREE_02_4 := 2287; -- OG VALUE 2385, change is 2625 bc I couldn't find 2500; -- Season 4: 2520 Arena, 1800 Rating - MH (Spellpower)
+SET @EXT_WEP_SEASON_THREE_03_4 := 2387; -- OG VALUE 2390; -- Season 4: 900 Arena, 1800 Rating - OH (Spellpower)
+SET @EXT_WEP_SEASON_THREE_04_4 := 133; -- OG VALUE 2389, change is 2283 bc I couldn't find 2100; -- Season 4: 2100 Arena, 1800 Rating - MH (Melee)
+SET @EXT_WEP_SEASON_THREE_05_4 := 2387; -- OG VALUE 2390; -- Season 4: 900 Arena, 1800 Rating - OH (Melee)
+SET @EXT_WEP_SEASON_THREE_06_4 := 2288; -- OG VALUE 2391; -- Season 4: 1500 Arena, 1800 Rating - Shield
 SET @EXT_WEP_SEASON_THREE_07_4 := 2388; -- Season 4: 800 Arena - Relic, Thrown, Wand
-SET @EXT_WEP_SEASON_THREE_08_4 := 2386; -- Season 4: 3000 Arena, 1800 Rating - Ranged Weapon
+SET @EXT_WEP_SEASON_THREE_08_4 := 2284; -- OG VALUE 2386, Change is 3150 Arena bc I couldn't find 3000; -- Season 4: 3000 Arena, 1800 Rating - Ranged Weapon
 SET @EXT_WEP_SEASON_THREE_09_4 := 2388; -- Season 4: 800 Arena - Hunter/DK 2-Handed Melee Weapon (Waraxe)
 SET @EXT_ARM_SEASON_THREE_01_4 := 2288; -- Season 4: 1500 Arena - Head
-SET @EXT_ARM_SEASON_THREE_02_4 := 2392; -- Season 4: 1200 Arena, 1950 Rating - Shoulders
+SET @EXT_ARM_SEASON_THREE_02_4 := 2286; -- OG VALUE 2392, change is 1125 bc I couldn't find 1200; -- Season 4: 1200 Arena, 1950 Rating - Shoulders
 SET @EXT_ARM_SEASON_THREE_03_4 := 2288; -- Season 4: 1500 Arena - Chest
 SET @EXT_ARM_SEASON_THREE_04_4 := 2288; -- Season 4: 1500 Arena - Legs
 SET @EXT_ARM_SEASON_THREE_05_4 := 2387; -- Season 4: 900 Arena - Hands
@@ -462,19 +462,19 @@ SET @EXT_ARM_SEASON_THREE_05_4 := 2387; -- Season 4: 900 Arena - Hands
 		Present in 1 season
 */
 /*-------------------------------SEASON 4---------------------------------*/
-SET @EXT_WEP_SEASON_FOUR_01_4 := 2360; -- Season 4: 3750 Arena, 2050 Rating - Two-Handed
-SET @EXT_WEP_SEASON_FOUR_02_4 := 2361; -- Season 4: 3150 Arena, 2050 Rating - MH (Spellpower)
-SET @EXT_WEP_SEASON_FOUR_03_4 := 2363; -- Season 4: 1125 Arena, 2050 Rating - OH (Spellpower)
-SET @EXT_WEP_SEASON_FOUR_04_4 := 2362; -- Season 4: 2625 Arena, 2050 Rating - MH (Melee)
-SET @EXT_WEP_SEASON_FOUR_05_4 := 2363; -- Season 4: 1125 Arena, 2050 Rating - OH (Melee)
-SET @EXT_WEP_SEASON_FOUR_06_4 := 2364; -- Season 4: 1875 Arena, 2050 Rating - Shield
-SET @EXT_WEP_SEASON_FOUR_07_4 := 2339; -- Season 4: 1000 Arena, 1750 Rating - Relic, Thrown, Wand
-SET @EXT_WEP_SEASON_FOUR_08_4 := 2360; -- Season 4: 3750 Arena, 2050 Rating - Ranged Weapon
-SET @EXT_WEP_SEASON_FOUR_09_4 := 2375; -- Season 4: 650 Arena, 2050 Rating - Hunter 1-Handed Melee Weapons (Hatchet, Waraxe)
-SET @EXT_ARM_SEASON_FOUR_01_4 := 2365; -- Season 4: 1875 Arena, 1700 Rating - Head
-SET @EXT_ARM_SEASON_FOUR_02_4 := 2359; -- Season 4: 1500 Arena, 2200 Rating - Shoulders
-SET @EXT_ARM_SEASON_FOUR_03_4 := 2337; -- Season 4: 1875 Arena, 1600 Rating - Chest
-SET @EXT_ARM_SEASON_FOUR_04_4 := 2366; -- Season 4: 1875 Arena, 1550 Rating - Legs
+SET @EXT_WEP_SEASON_FOUR_01_4 := 1664; -- OG VALUE 2360; -- Season 4: 3750 Arena, 2050 Rating - Two-Handed
+SET @EXT_WEP_SEASON_FOUR_02_4 := 2284; -- OG VALUE 2361; -- Season 4: 3150 Arena, 2050 Rating - MH (Spellpower)
+SET @EXT_WEP_SEASON_FOUR_03_4 := 2286; -- OG VALUE 2363; -- Season 4: 1125 Arena, 2050 Rating - OH (Spellpower)
+SET @EXT_WEP_SEASON_FOUR_04_4 := 2287; -- OG VALUE 2362; -- Season 4: 2625 Arena, 2050 Rating - MH (Melee)
+SET @EXT_WEP_SEASON_FOUR_05_4 := 2286; -- OG VALUE 2363; -- Season 4: 1125 Arena, 2050 Rating - OH (Melee)
+SET @EXT_WEP_SEASON_FOUR_06_4 := 2285; -- OG VALUE 2364; -- Season 4: 1875 Arena, 2050 Rating - Shield
+SET @EXT_WEP_SEASON_FOUR_07_4 := 1758; -- OG VALUE 2339; -- Season 4: 1000 Arena, 1750 Rating - Relic, Thrown, Wand
+SET @EXT_WEP_SEASON_FOUR_08_4 := 1664; -- OG VALUE 2360; -- Season 4: 3750 Arena, 2050 Rating - Ranged Weapon
+SET @EXT_WEP_SEASON_FOUR_09_4 := 2388; -- OG VALUE 2375, CHANGE IS 800 Arena bc that's the lowest I can find; -- Season 4: 650 Arena, 2050 Rating - Hunter 1-Handed Melee Weapons (Hatchet, Waraxe)
+SET @EXT_ARM_SEASON_FOUR_01_4 := 2285; -- OG VALUE 2365; -- Season 4: 1875 Arena, 1700 Rating - Head
+SET @EXT_ARM_SEASON_FOUR_02_4 := 2288; -- OG VALUE 2359; -- Season 4: 1500 Arena, 2200 Rating - Shoulders
+SET @EXT_ARM_SEASON_FOUR_03_4 := 2285; -- OG VALUE 2337; -- Season 4: 1875 Arena, 1600 Rating - Chest
+SET @EXT_ARM_SEASON_FOUR_04_4 := 2285; -- OG VALUE 2366; -- Season 4: 1875 Arena, 1550 Rating - Legs
 SET @EXT_ARM_SEASON_FOUR_05_4 := 2342; -- Season 4: 1125 Arena - Hands
 -- SET @EXT_GEM_SEASON_FOUR_01_4 := 2388; -- Season 4: 800 Arena
 /*------------------------------------------------------------------------*/
@@ -500,10 +500,10 @@ SET @EXT_ACC_ACCESSORY_07_3 := 127 ; -- Season 3: 16000 Honor - Vindicator's Pen
 -- SET @EXT_GEM_ACCESSORY_01_3 := 2388; -- Season 3: 800 Arena - Gems
 /*-------------------------------SEASON 4---------------------------------*/
 SET @EXT_ACC_ACCESSORY_01_4  := 2289; -- Season 4: 31000 Honor - Battlemaster Trinkets
-SET @EXT_ACC_ACCESSORY_02_4  := 2402; -- Season 4: 16000 Honor, 1650 Rating - Guardian Bands
-SET @EXT_ACC_ACCESSORY_03_4  := 2401; -- Season 4: 13000 Honor, 1575 Rating - Guardian Wrist
+SET @EXT_ACC_ACCESSORY_02_4  := 2028; -- OG VALUE 2402; -- Season 4: 16000 Honor, 1650 Rating - Guardian Bands
+SET @EXT_ACC_ACCESSORY_03_4  := 1935; -- OG VALUE 2401; -- Season 4: 13000 Honor, 1575 Rating - Guardian Wrist
 SET @EXT_ACC_ACCESSORY_04_4  := 1923; -- Season 4: 18000 Honor - Guardian Waist
-SET @EXT_ACC_ACCESSORY_05_4  := 2400; -- Season 4: 18000 Honor, 1700 Rating - Guardian Feet
+SET @EXT_ACC_ACCESSORY_05_4  := 1923; -- OG VALUE 2400; -- Season 4: 18000 Honor, 1700 Rating - Guardian Feet
 SET @EXT_ACC_ACCESSORY_06_4  := 127 ; -- Season 4: 16000 Honor - Guardian Pendant
 SET @EXT_ACC_ACCESSORY_07_4  := 129 ; -- Season 4: 12000 Honor - Vindicator Band
 SET @EXT_ACC_ACCESSORY_08_4  := 2405; -- Season 4: 9200 Honor - Vindicator Wrist

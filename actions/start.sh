@@ -23,7 +23,7 @@ else
 fi
 
 echo "Waiting for world to load before starting auth..."
-sleep 60
+sleep 30
 
 if tmux new-session -d -s $authserver_session; then
     echo "Created authserver session: $authserver_session"

@@ -18,7 +18,7 @@ VALUES (200011, "Felix Sunstreak", "Exotic Mounts", "Buy", 40, 40, 475, 4225, 1,
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200011, 0, 7993, 1, 1);
+VALUES (200011, 0, 7164, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200011, 33976);
 INSERT INTO npc_vendor (entry, item) VALUES (200011, 33999);

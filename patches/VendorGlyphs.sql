@@ -14,11 +14,11 @@ DELETE FROM npc_vendor WHERE entry=200000;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Tinker Tosslecrank", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200000, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Tinker Tosslecrank", "Death Knight Glyphs", "Buy", 40, 40, 475, 4225, 200000, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200000, 0, 7164, 1, 1);
+VALUES (200000, 0, 7103, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200000, 43533);
 INSERT INTO npc_vendor (entry, item) VALUES (200000, 43534);
@@ -61,57 +61,57 @@ INSERT INTO npc_vendor (entry, item) VALUES (200000, 45806);
 -- I changed the ID on this one so it doesn't conflict w/
 -- the vendor from Improved Bank mod.
 
-DELETE FROM creature_template WHERE entry=200010;
-DELETE FROM creature_template_model WHERE CreatureID=200010;
-DELETE FROM creature WHERE id1=200010;
-DELETE FROM npc_vendor WHERE entry=200010;
+DELETE FROM creature_template WHERE entry=200012;
+DELETE FROM creature_template_model WHERE CreatureID=200012;
+DELETE FROM creature WHERE id1=200012;
+DELETE FROM npc_vendor WHERE entry=200012;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Klink Goldsprocket", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200010, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Klink Goldsprocket", "Druid Glyphs", "Buy", 40, 40, 475, 4225, 200012, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200010, 0, 7164, 1, 1);
+VALUES (200012, 0, 10740, 1, 1);
 
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40896);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40897);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40899);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40900);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40901);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40902);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40903);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40906);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40908);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40909);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40912);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40913);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40914);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40915);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40916);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40919);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40920);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40921);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40922);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40923);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 40924);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43316);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43331);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43332);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43334);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43335);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 43674);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 44922);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 44928);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45601);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45602);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45603);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45604);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45622);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 45623);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 46372);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 48720);
-INSERT INTO npc_vendor (entry, item) VALUES (200010, 50125);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40896);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40897);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40899);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40900);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40901);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40902);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40903);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40906);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40908);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40909);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40912);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40913);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40914);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40915);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40916);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40919);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40920);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40921);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40922);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40923);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 40924);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43316);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43331);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43332);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43334);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43335);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 43674);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 44922);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 44928);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45601);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45602);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45603);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45604);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45622);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 45623);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 46372);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 48720);
+INSERT INTO npc_vendor (entry, item) VALUES (200012, 50125);
 
 -- =================================================
 -- Glyph Vendor - Hunter
@@ -124,11 +124,11 @@ DELETE FROM npc_vendor WHERE entry=200002;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Snickers Blastwhiz", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200002, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Snickers Blastwhiz", "Hunter Glyphs", "Buy", 40, 40, 475, 4225, 200002, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200002, 0, 7164, 1, 1);
+VALUES (200002, 0, 10741, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200002, 42897);
 INSERT INTO npc_vendor (entry, item) VALUES (200002, 42898);
@@ -175,11 +175,11 @@ DELETE FROM npc_vendor WHERE entry=200003;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Fizzle Whizzblast", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200003, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Fizzle Whizzblast", "Mage Glyphs", "Buy", 40, 40, 475, 4225, 200003, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200003, 0, 7164, 1, 1);
+VALUES (200003, 0, 16941, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200003, 42734);
 INSERT INTO npc_vendor (entry, item) VALUES (200003, 42735);
@@ -229,11 +229,11 @@ DELETE FROM npc_vendor WHERE entry=200004;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Ratchet Geargrin", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200004, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Ratchet Geargrin", "Paladin Glyphs", "Buy", 40, 40, 475, 4225, 200004, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200004, 0, 7164, 1, 1);
+VALUES (200004, 0, 14775, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200004, 41092);
 INSERT INTO npc_vendor (entry, item) VALUES (200004, 41094);
@@ -281,11 +281,11 @@ DELETE FROM npc_vendor WHERE entry=200005;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Bling Blingerson", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200005, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Bling Blingerson", "Rogue Glyphs", "Buy", 40, 40, 475, 4225, 200005, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200005, 0, 7164, 1, 1);
+VALUES (200005, 0, 7179, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200005, 42954);
 INSERT INTO npc_vendor (entry, item) VALUES (200005, 42955);
@@ -333,11 +333,11 @@ DELETE FROM npc_vendor WHERE entry=200006;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Sparky Boomflame", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200006, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Sparky Boomflame", "Shaman Glyphs", "Buy", 40, 40, 475, 4225, 200006, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200006, 0, 7164, 1, 1);
+VALUES (200006, 0, 7341, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200006, 41517);
 INSERT INTO npc_vendor (entry, item) VALUES (200006, 41518);
@@ -386,11 +386,11 @@ DELETE FROM npc_vendor WHERE entry=200007;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Razzle Quickfuse", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200007, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Razzle Quickfuse", "Warlock Glyphs", "Buy", 40, 40, 475, 4225, 200007, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200007, 0, 7164, 1, 1);
+VALUES (200007, 0, 11690, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200007, 42453);
 INSERT INTO npc_vendor (entry, item) VALUES (200007, 42454);
@@ -439,11 +439,11 @@ DELETE FROM npc_vendor WHERE entry=200008;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Gizmo Gearspark", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200008, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Gizmo Gearspark", "Warrior Glyphs", "Buy", 40, 40, 475, 4225, 200008, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200008, 0, 7164, 1, 1);
+VALUES (200008, 0, 10739, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200008, 43395);
 INSERT INTO npc_vendor (entry, item) VALUES (200008, 43396);
@@ -491,11 +491,11 @@ DELETE FROM npc_vendor WHERE entry=200009;
 
 -- Insert into creature_template
 INSERT INTO creature_template (name, subname, IconName, minlevel, maxlevel, faction, npcflag, entry, speed_walk, speed_run, scale, DamageModifier, unit_class, HealthModifier, ManaModifier, ArmorModifier, RegenHealth, VerifiedBuild)
-VALUES ("Zipp Gearwrench", "Inkwell Cartel", "Buy", 40, 40, 475, 4225, 200009, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+VALUES ("Zipp Gearwrench", "Priest Glyphs", "Buy", 40, 40, 475, 4225, 200009, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 -- Insert into creature_template_model
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
-VALUES (200009, 0, 7164, 1, 1);
+VALUES (200009, 0, 15998, 1, 1);
 
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 42396);
 INSERT INTO npc_vendor (entry, item) VALUES (200009, 42397);
@@ -541,7 +541,7 @@ INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMa
 (200002, 0, 0, 1, 0, 0, 1, 1, 0, -7222.31, -3793.67, 0.760935, 4.01362, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200009, 0, 0, 1, 0, 0, 1, 1, 0, -7233.97, -3814.19, 0.760343, 0.74571, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200003, 0, 0, 1, 0, 0, 1, 1, 0, -7233.61, -3792.97, 0.759746, 5.54866, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
-(200010, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
+(200012, 0, 0, 1, 0, 0, 1, 1, 0, -7222.84, -3813.71, 0.759794, 2.2901, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL),
 (200006, 0, 0, 1, 0, 0, 1, 1, 0, -7226.03, -3814.59, 0.761188, 1.42316, 300, 0, 0, 2614, 0, 0, 0, 0, 0, '', NULL);
 
 -- make vendor prices half of required level in gold
