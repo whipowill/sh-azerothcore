@@ -6,6 +6,8 @@ A helper bash script for installing and maintaining an Azerothcore server.
 
 ## Install
 
+**Note you can install to any directory you want and this will still work. The script uses relative paths internally.  You can also use whatever username you want.**
+
 - Provision fresh Ubuntu LTS server.
 - Connect as ``root``:
 
@@ -112,35 +114,6 @@ $ menu
 - Edit conigs
 - Push configs
 - Start server
-
-## Recommended Mods
-
-- [WorldChat](https://github.com/azerothcore/mod-world-chat) - enable world chat
-- [ProgressionSystem](https://github.com/azerothcore/mod-progression-system) - choose your expansion
-- [AutoBalance](https://github.com/azerothcore/mod-autobalance.git) - scale dungeons down
-- [AuctionHouse](https://github.com/azerothcore/mod-ah-bot.git) - enable faux auction trades
-- [AccountMounts](https://github.com/azerothcore/mod-account-mounts) - share mounts on all toons
-- [TransmogNPC](https://github.com/azerothcore/mod-transmog.git) - enable transmog NPC
-- [LearnSpells](https://github.com/noisiver/mod-learnspells) - auto learn spells
-- [SoloLFG](https://github.com/azerothcore/mod-solo-lfg.git) - use RDF w/ less than 5
-- [HonorGuard](https://github.com/azerothcore/mod-gain-honor-guard) - kill guards for honor
-- [CTASwitch](https://github.com/azerothcore/mod-cta-switch) - control call-to-arms rotation
-- [StarterGuild](https://github.com/azerothcore/mod-starter-guild) - all new toons join guild
-- [GuildFunds](https://github.com/noisiver/mod-guildfunds) - tithe to the guild
-- [AllRacesAllClasses](https://github.com/heyitsbench/mod-arac) - any race can be any class
-- [PVPTitles](https://github.com/azerothcore/mod-pvp-titles) - wear vanilla pvp titles
-- [DungeonRespawn](https://github.com/AnchyDev/DungeonRespawn) - no more dungeon corpse walk
-- [TimeIsTime](https://github.com/dunjeon/mod-TimeIsTime) - change length of a day
-- [LootParty](https://github.com/pangolp/mod-quest-loot-party) - quest items lootable by all
-- [StartingPet](https://github.com/Gozzim/mod-starting-pet) - hunters start game w/ pet
-- [HearthReset](https://github.com/BytesGalore/mod-no-hearthstone-cooldown) - no heathstone cooldown
-
-**My Mods**
-
-- [SavageRoar](https://github.com/whipowill/wow-acore-mod-savage-roar) - buff Feral Druids
-- [NerfHerder](https://github.com/whipowill/wow-acore-mod-nerf-herder) - fix town guards over level
-
-You may want to peruse the [index](https://github.com/topics/azerothcore-module) of every module available.
 
 ## Custom Patches
 
