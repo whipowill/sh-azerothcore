@@ -1,5 +1,5 @@
 /*
-Add a mysterious female goblin vendors
+Add mysterious female goblin vendors
 to sell gems in Gadgetzan.
 */
 
@@ -42,7 +42,7 @@ VALUES
 DELETE FROM npc_vendor WHERE entry IN (601099, 601100, 601101, 601102, 601103, 601104, 601105, 601106);
 INSERT INTO npc_vendor (`entry`,`item`)
 VALUES
--- 514 - AZURIA
+-- BLUE
 ('601099','23118'),
 ('601099','23119'),
 ('601099','23120'),
@@ -84,7 +84,7 @@ VALUES
 ('601099','42155'),
 ('601099','45880'),
 ('601099','45881'),
--- 541 - TRALIA
+-- GREEN
 ('601100','23103'),
 ('601100','23104'),
 ('601100','23105'),
@@ -197,7 +197,7 @@ VALUES
 ('601100','41479'),
 ('601100','41480'),
 ('601100','41481'),
--- 559 - MATERIA
+-- META
 ('601106','25890'),
 ('601106','25893'),
 ('601106','25894'),
@@ -245,7 +245,7 @@ VALUES
 ('601106','44087'),
 ('601106','44088'),
 ('601106','44089'),
--- 567 - EMBERIA
+-- ORANGE
 ('601101','23098'),
 ('601101','23099'),
 ('601101','23100'),
@@ -382,7 +382,7 @@ VALUES
 ('601101','41500'),
 ('601101','41501'),
 ('601101','41502'),
--- 571 - PRISMIA
+-- PRISMATIC
 ('601105','22459'),
 ('601105','22460'),
 ('601105','34142'),
@@ -390,7 +390,7 @@ VALUES
 ('601105','42701'),
 ('601105','42702'),
 ('601105','49110'),
--- 573 - STARRIA
+-- PURPLE
 ('601102','23108'),
 ('601102','23109'),
 ('601102','23110'),
@@ -480,7 +480,7 @@ VALUES
 ('601102','41460'),
 ('601102','41461'),
 ('601102','41462'),
--- 592 - CRIMSONIA
+-- RED
 ('601103','23094'),
 ('601103','23095'),
 ('601103','23096'),
@@ -565,7 +565,7 @@ VALUES
 ('601103','45862'),
 ('601103','45879'),
 ('601103','45883'),
--- 612 - SUNFLORIA
+-- YELLOW
 ('601104','23113'),
 ('601104','23114'),
 ('601104','23115'),
@@ -639,6 +639,18 @@ VALUES
 ('601104','44066'),
 ('601104','45882');
 
+-- Set gem prices based on quality
+UPDATE item_template
+SET BuyPrice =
+    CASE
+        WHEN Quality = 2 THEN 10000    -- Uncommon (green border): 1 gold (10000 copper)
+        WHEN Quality = 3 THEN 100000   -- Rare (blue border): 10 gold (100000 copper)
+        WHEN Quality = 4 THEN 1000000  -- Epic (purple border): 100 gold (1000000 copper)
+        ELSE 10000                     -- Default fallback
+    END
+WHERE class = 3; -- Gems only
+
+-- Set the NPCs in Gadgetzan
 DELETE FROM creature WHERE id1 IN (601099, 601100, 601101, 601102, 601103, 601104, 601105, 601106);
 INSERT INTO `creature` (`id1`, `id2`, `id3`, `map`, `zoneId`, `areaId`, `spawnMask`, `phaseMask`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `wander_distance`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `dynamicflags`, `ScriptName`, `VerifiedBuild`, `CreateObject`, `Comment`) VALUES
 (601106, 0, 0, 1, 0, 0, 1, 1, 0, -7218.33, -3808.59, -1.12569, 2.88954, 300, 0, 0, 1524, 0, 0, 0, 0, 0, '', NULL, 0, NULL),
