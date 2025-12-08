@@ -25,7 +25,7 @@ VALUES
 -- PRISMATIC
 ('601105', 'Iris Iridian', 'Prismatic Gems', NULL, '40', '40', 475, 4225, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1),
 -- META
-('601106', 'Mica Mirrorglint', 'Meta Gems', NULL, '40', '40', 475, 4225, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
+('601106', 'Misty Mirrorglint', 'Meta Gems', NULL, '40', '40', 475, 4225, 1, 1.14286, 1, 1, 1, 1, 1, 1, 1, 1);
 
 DELETE FROM creature_template_model WHERE CreatureID IN (601099, 601100, 601101, 601102, 601103, 601104, 601105, 601106);
 INSERT INTO creature_template_model (CreatureID, Idx, CreatureDisplayID, DisplayScale, Probability)
